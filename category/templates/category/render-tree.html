@@ -1,0 +1,14 @@
+{% load category_tags %}
+<ul {{ attrs_str }}>
+{% if display_root %}
+	{% for object in roots %}
+	{% render_node object value %}
+	{% endfor %}
+{% else %}
+	{% for object in roots %}
+	{% for child in object.children %}
+	{% render_node child value %}
+	{% endfor %}
+	{% endfor %}
+{% endif %}
+</ul>

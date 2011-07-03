@@ -1,0 +1,12 @@
+{% load insert_tags %}
+{% insert_handler %}
+<html>
+<head>
+{% media_container media %}
+{% insert_str media "jquery/jquery.min.js" %}
+{{ form.media }}
+</head>
+<body>
+{{ form.as_p }}
+</body>
+</html>

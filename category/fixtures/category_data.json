@@ -1,0 +1,74 @@
+[
+    {
+        "pk": 6,
+        "model": "category.category",
+        "fields": {
+            "name": "analyzes",
+            "parent": null,
+            "is_root": true,
+            "sort_order": 0,
+            "root": 6,
+            "slug": "analyzes"
+        }
+    },
+    {
+        "pk": 1,
+        "model": "category.category",
+        "fields": {
+            "name": "blogs",
+            "parent": null,
+            "is_root": true,
+            "sort_order": 0,
+            "root": 1,
+            "slug": "blogs"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "category.category",
+        "fields": {
+            "name": "DIY",
+            "parent": 1,
+            "is_root": false,
+            "sort_order": 0,
+            "root": 1,
+            "slug": "diy"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "category.category",
+        "fields": {
+            "name": "Handmade",
+            "parent": 3,
+            "is_root": false,
+            "sort_order": 0,
+            "root": 1,
+            "slug": "handmade"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "category.category",
+        "fields": {
+            "name": "Hardware",
+            "parent": 3,
+            "is_root": false,
+            "sort_order": 0,
+            "root": 1,
+            "slug": "hardware"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "category.category",
+        "fields": {
+            "name": "\u043f\u0438\u043d\u0433\u043f\u043e\u043d\u0433",
+            "parent": null,
+            "is_root": true,
+            "sort_order": 0,
+            "root": 2,
+            "slug": "pingpong"
+        }
+    }
+]
