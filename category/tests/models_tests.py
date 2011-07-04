@@ -4,13 +4,16 @@ from category.models import Category
 class TestModels(unittest.TestCase):
     fixtures = ['category_data.json']
 
-    blogs = Category.objects.get(slug = 'blogs')
-    pingpong = Category.objects.get(slug = 'pingpong')
+    def setUp(self):
+        self.blogs = Category.objects.get(slug = 'blogs')
+        self.pingpong = Category.objects.get(slug = 'pingpong')
 
     def testNewCategory(self):
         """ Verify category creating is ok """
         category = Category(name = 'test')
         category.save()
+        self.assertNotEquals(category.root, None)
+        self.assertEquals(category.root.pk, category.pk)
 
     def testData(self):
         self.assertEquals(self.blogs.root.pk, self.blogs.pk)
@@ -44,5 +47,9 @@ class TestModels(unittest.TestCase):
         self.assertEquals(category2.parent.pk, category.pk)
         self.assertEquals(category3.root.pk, self.blogs.pk)
         self.assertEquals(category3.parent.pk, self.blogs.pk)
+
+    def testGetOrCreate(self):
+        category, created = Category.objects.get_or_create(name = 'ask.blogs')
+        self.assertEquals(category.root.pk, category.pk)
 
 

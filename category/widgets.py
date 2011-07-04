@@ -51,7 +51,6 @@ class CategorySelectWidget(forms.Select):
         self.map = {}
         self.root = []
         for key, category in choices:
-            print key, category
             current = self.map.get(category.pk, None)
             if current is None:
                 current = Node(category)

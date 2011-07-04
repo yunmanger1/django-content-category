@@ -6,7 +6,7 @@ from category.fields import CategoryField
 Category = get_model('category', 'category')
 
 class CategoryAdminForm(forms.ModelForm):
-    parent = CategoryField(display_root = True, collapse = False)
+    parent = CategoryField(display_root = True, collapse = False, required = False)
 
     class Meta:
         model = Category

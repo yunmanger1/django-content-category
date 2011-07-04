@@ -8,8 +8,9 @@ log = getLogger(__file__)
 class TestWidgets(unittest.TestCase):
     fixtures = ['category_data.json']
 
-    blogs = Category.objects.get(slug = 'blogs')
-    pingpong = Category.objects.get(slug = 'pingpong')
+    def tearUp(self):
+        self.blogs = Category.objects.get(slug = 'blogs')
+        self.pingpong = Category.objects.get(slug = 'pingpong')
 
     def testData(self):
         self.assertEquals(Category.objects.count(), 6)

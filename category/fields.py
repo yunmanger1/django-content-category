@@ -1,7 +1,8 @@
 from django import forms
 from category.widgets import CategorySelectWidget
 from category.models import Category
-from django.db.models.fields import Field
+from django.core import validators
+from django.core.exceptions import ValidationError
 
 
 class CategoryField(forms.ModelChoiceField):
@@ -13,11 +14,9 @@ class CategoryField(forms.ModelChoiceField):
             kw['widget'] = widget
         if queryset is None:
             empty = Category.objects.none()
-#            self.choices = empty
             kw['queryset'] = empty
         else:
             kw['queryset'] = queryset
-#            self.choices = queryset
         kw['empty_label'] = None
         super(CategoryField, self).__init__(*a, **kw)
         self.root = root
@@ -34,11 +33,20 @@ class CategoryField(forms.ModelChoiceField):
         self._root = value
         if self._root is None:
             queryset = Category.objects.all()
-#            self.choices = queryset
             self.queryset = queryset
         else:
             queryset = Category.objects.filter(root = self._root)
-#            self.choices = queryset
             self.queryset = queryset
 
     root = property(_get_root, _set_root)
+
+    def validate(self, value):
+        if value in validators.EMPTY_VALUES:
+            if self.required:
+                raise ValidationError(self.error_messages['required'])
+        else:
+            key = self.to_field_name or 'pk'
+            try:
+                self.queryset.get(**{key : getattr(value, key)})
+            except:
+                raise ValidationError(self.error_messages['invalid_choice'])
