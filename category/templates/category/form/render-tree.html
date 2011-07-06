@@ -2,12 +2,12 @@
 <ul {{ attrs_str }}>
 {% if display_root %}
 	{% for object in roots %}
-	{% render_node object value "category/form/render-node.html" %}
+	{% render_node root=object value=value template_name="category/form/render-node.html" %}
 	{% endfor %}
 {% else %}
 	{% for object in roots %}
 	{% for child in object.children %}
-	{% render_node child value "category/form/render-node.html" %}
+	{% render_node root=child value=value template_name="category/form/render-node.html" %}
 	{% endfor %}
 	{% endfor %}
 {% endif %}
