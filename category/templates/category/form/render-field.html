@@ -1,0 +1,27 @@
+<div id="{{attrs.id}}_container">
+{% include "category/form/render-tree.html" %}
+<script>
+$(document).ready(function(){
+	$("ul#{{ attrs.id }}").treeview({
+		/*persist: "cookie",*/
+		collapsed: {% if collapse %}true{% else %}false{% endif %},
+		cookieId: '{{ attrs.id }}',
+		unique: true,
+	});
+	var {{attrs.id}}_func = function(){
+		var inp = $("#{{attrs.id}}_container input[name='{{ name }}']");
+		if ($(this).hasClass('selected')){
+			$(this).removeClass('selected');
+			inp.val('');
+		}else{
+			inp.val($(this).attr('href'));
+			$("#{{ attrs.id }} a").removeClass('selected');
+			$(this).addClass('selected');
+		} 
+		return false;
+	}
+	$("ul#{{ attrs.id }} a").toggle({{attrs.id}}_func, {{attrs.id}}_func);
+});
+</script>
+<input type="hidden" name="{{ name }}" value="{{ value }}" />
+</div>

@@ -1,0 +1,470 @@
+[
+    {
+        "pk": 3,
+        "model": "blog.category",
+        "fields": {
+            "slug": "acm",
+            "parent": 2,
+            "title": "ACM"
+        }
+    },
+    {
+        "pk": 43,
+        "model": "blog.category",
+        "fields": {
+            "slug": "c",
+            "parent": 42,
+            "title": "C++"
+        }
+    },
+    {
+        "pk": 45,
+        "model": "blog.category",
+        "fields": {
+            "slug": "delphi",
+            "parent": 42,
+            "title": "Delphi"
+        }
+    },
+    {
+        "pk": 25,
+        "model": "blog.category",
+        "fields": {
+            "slug": "faq",
+            "parent": null,
+            "title": "FAQ"
+        }
+    },
+    {
+        "pk": 35,
+        "model": "blog.category",
+        "fields": {
+            "slug": "hardware",
+            "parent": 33,
+            "title": "Hardware"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "blog.category",
+        "fields": {
+            "slug": "ioi",
+            "parent": 2,
+            "title": "IOI"
+        }
+    },
+    {
+        "pk": 33,
+        "model": "blog.category",
+        "fields": {
+            "slug": "it",
+            "parent": null,
+            "title": "IT"
+        }
+    },
+    {
+        "pk": 47,
+        "model": "blog.category",
+        "fields": {
+            "slug": "java",
+            "parent": 42,
+            "title": "Java"
+        }
+    },
+    {
+        "pk": 44,
+        "model": "blog.category",
+        "fields": {
+            "slug": "pascal",
+            "parent": 42,
+            "title": "Pascal"
+        }
+    },
+    {
+        "pk": 46,
+        "model": "blog.category",
+        "fields": {
+            "slug": "python",
+            "parent": 42,
+            "title": "Python"
+        }
+    },
+    {
+        "pk": 21,
+        "model": "blog.category",
+        "fields": {
+            "slug": "qwerty",
+            "parent": null,
+            "title": "Qwerty"
+        }
+    },
+    {
+        "pk": 48,
+        "model": "blog.category",
+        "fields": {
+            "slug": "ruby",
+            "parent": 42,
+            "title": "Ruby"
+        }
+    },
+    {
+        "pk": 50,
+        "model": "blog.category",
+        "fields": {
+            "slug": "topcoder",
+            "parent": 2,
+            "title": "Topcoder"
+        }
+    },
+    {
+        "pk": 49,
+        "model": "blog.category",
+        "fields": {
+            "slug": "visual-c",
+            "parent": 42,
+            "title": "Visual C++"
+        }
+    },
+    {
+        "pk": 34,
+        "model": "blog.category",
+        "fields": {
+            "slug": "web-razrabotka",
+            "parent": 33,
+            "title": "Web-\u0440\u0430\u0437\u0440\u0430\u0431\u043e\u0442\u043a\u0430"
+        }
+    },
+    {
+        "pk": 1,
+        "model": "blog.category",
+        "fields": {
+            "slug": "algoritmi",
+            "parent": null,
+            "title": "\u0410\u043b\u0433\u043e\u0440\u0438\u0442\u043c\u044b"
+        }
+    },
+    {
+        "pk": 18,
+        "model": "blog.category",
+        "fields": {
+            "slug": "algoritmi-na-strokah",
+            "parent": 1,
+            "title": "\u0410\u043b\u0433\u043e\u0440\u0438\u0442\u043c\u044b \u043d\u0430 \u0441\u0442\u0440\u043e\u043a\u0430\u0445"
+        }
+    },
+    {
+        "pk": 9,
+        "model": "blog.category",
+        "fields": {
+            "slug": "arifmetika",
+            "parent": 1,
+            "title": "\u0410\u0440\u0438\u0444\u043c\u0435\u0442\u0438\u043a\u0430"
+        }
+    },
+    {
+        "pk": 27,
+        "model": "blog.category",
+        "fields": {
+            "slug": "arhiv-zadach",
+            "parent": 25,
+            "title": "\u0410\u0440\u0445\u0438\u0432 \u0437\u0430\u0434\u0430\u0447"
+        }
+    },
+    {
+        "pk": 30,
+        "model": "blog.category",
+        "fields": {
+            "slug": "voprosi-otveti",
+            "parent": 25,
+            "title": "\u0412\u043e\u043f\u0440\u043e\u0441\u044b-\u041e\u0442\u0432\u0435\u0442\u044b"
+        }
+    },
+    {
+        "pk": 10,
+        "model": "blog.category",
+        "fields": {
+            "slug": "geometriya",
+            "parent": 1,
+            "title": "\u0413\u0435\u043e\u043c\u0435\u0442\u0440\u0438\u044f"
+        }
+    },
+    {
+        "pk": 12,
+        "model": "blog.category",
+        "fields": {
+            "slug": "dinamika",
+            "parent": 1,
+            "title": "\u0414\u0438\u043d\u0430\u043c\u0438\u043a\u0430"
+        }
+    },
+    {
+        "pk": 55,
+        "model": "blog.category",
+        "fields": {
+            "slug": "dlinnaya-arifmetika",
+            "parent": null,
+            "title": "\u0414\u043b\u0438\u043d\u043d\u0430\u044f \u0410\u0440\u0438\u0444\u043c\u0435\u0442\u0438\u043a\u0430"
+        }
+    },
+    {
+        "pk": 24,
+        "model": "blog.category",
+        "fields": {
+            "slug": "jautikovskaya",
+            "parent": 2,
+            "title": "\u0416\u0430\u0443\u0442\u044b\u043a\u043e\u0432\u0441\u043a\u0430\u044f"
+        }
+    },
+    {
+        "pk": 22,
+        "model": "blog.category",
+        "fields": {
+            "slug": "zadachi-na-realizaciyu",
+            "parent": 1,
+            "title": "\u0417\u0430\u0434\u0430\u0447\u0438 \u043d\u0430 \u0440\u0435\u0430\u043b\u0438\u0437\u0430\u0446\u0438\u044e"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "blog.category",
+        "fields": {
+            "slug": "kazahstanskie-olimpiadi",
+            "parent": 2,
+            "title": "\u041a\u0430\u0437\u0430\u0445\u0441\u0442\u0430\u043d\u0441\u043a\u0438\u0435 \u043e\u043b\u0438\u043c\u043f\u0438\u0430\u0434\u044b"
+        }
+    },
+    {
+        "pk": 14,
+        "model": "blog.category",
+        "fields": {
+            "slug": "kombinatorika",
+            "parent": 1,
+            "title": "\u041a\u043e\u043c\u0431\u0438\u043d\u0430\u0442\u043e\u0440\u0438\u043a\u0430"
+        }
+    },
+    {
+        "pk": 41,
+        "model": "blog.category",
+        "fields": {
+            "slug": "kompilyatori",
+            "parent": 25,
+            "title": "\u041a\u043e\u043c\u043f\u0438\u043b\u044f\u0442\u043e\u0440\u044b"
+        }
+    },
+    {
+        "pk": 23,
+        "model": "blog.category",
+        "fields": {
+            "slug": "logika",
+            "parent": 1,
+            "title": "\u041b\u043e\u0433\u0438\u043a\u0430"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "blog.category",
+        "fields": {
+            "slug": "oblastnie",
+            "parent": 5,
+            "title": "\u041e\u0431\u043b\u0430\u0441\u0442\u043d\u044b\u0435"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "blog.category",
+        "fields": {
+            "slug": "olimpiadi",
+            "parent": null,
+            "title": "\u041e\u043b\u0438\u043c\u043f\u0438\u0430\u0434\u044b"
+        }
+    },
+    {
+        "pk": 37,
+        "model": "blog.category",
+        "fields": {
+            "slug": "os",
+            "parent": 33,
+            "title": "\u041e\u0421"
+        }
+    },
+    {
+        "pk": 16,
+        "model": "blog.category",
+        "fields": {
+            "slug": "perebor",
+            "parent": 1,
+            "title": "\u041f\u0435\u0440\u0435\u0431\u043e\u0440"
+        }
+    },
+    {
+        "pk": 20,
+        "model": "blog.category",
+        "fields": {
+            "slug": "poisk",
+            "parent": 1,
+            "title": "\u041f\u043e\u0438\u0441\u043a"
+        }
+    },
+    {
+        "pk": 29,
+        "model": "blog.category",
+        "fields": {
+            "slug": "razbori",
+            "parent": 25,
+            "title": "\u0420\u0430\u0437\u0431\u043e\u0440\u044b"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "blog.category",
+        "fields": {
+            "slug": "regionalnie",
+            "parent": 5,
+            "title": "\u0420\u0435\u0433\u0438\u043e\u043d\u0430\u043b\u044c\u043d\u044b\u0435"
+        }
+    },
+    {
+        "pk": 54,
+        "model": "blog.category",
+        "fields": {
+            "slug": "rekursiya",
+            "parent": 1,
+            "title": "\u0420\u0435\u043a\u0443\u0440\u0441\u0438\u044f"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "blog.category",
+        "fields": {
+            "slug": "respublikanskie",
+            "parent": 5,
+            "title": "\u0420\u0435\u0441\u043f\u0443\u0431\u043b\u0438\u043a\u0430\u043d\u0441\u043a\u0438\u0435"
+        }
+    },
+    {
+        "pk": 38,
+        "model": "blog.category",
+        "fields": {
+            "slug": "robototehnika",
+            "parent": 33,
+            "title": "\u0420\u043e\u0431\u043e\u0442\u043e\u0442\u0435\u0445\u043d\u0438\u043a\u0430"
+        }
+    },
+    {
+        "pk": 39,
+        "model": "blog.category",
+        "fields": {
+            "slug": "seti",
+            "parent": 33,
+            "title": "\u0421\u0435\u0442\u0438"
+        }
+    },
+    {
+        "pk": 40,
+        "model": "blog.category",
+        "fields": {
+            "slug": "sistema",
+            "parent": 25,
+            "title": "\u0421\u0438\u0441\u0442\u0435\u043c\u0430"
+        }
+    },
+    {
+        "pk": 31,
+        "model": "blog.category",
+        "fields": {
+            "slug": "sobitiya",
+            "parent": 25,
+            "title": "\u0421\u043e\u0431\u044b\u0442\u0438\u044f"
+        }
+    },
+    {
+        "pk": 26,
+        "model": "blog.category",
+        "fields": {
+            "slug": "sorevnovaniya",
+            "parent": 25,
+            "title": "\u0421\u043e\u0440\u0435\u0432\u043d\u043e\u0432\u0430\u043d\u0438\u044f"
+        }
+    },
+    {
+        "pk": 19,
+        "model": "blog.category",
+        "fields": {
+            "slug": "sortirovki",
+            "parent": 1,
+            "title": "\u0421\u043e\u0440\u0442\u0438\u0440\u043e\u0432\u043a\u0438"
+        }
+    },
+    {
+        "pk": 36,
+        "model": "blog.category",
+        "fields": {
+            "slug": "soft",
+            "parent": 33,
+            "title": "\u0421\u043e\u0444\u0442"
+        }
+    },
+    {
+        "pk": 28,
+        "model": "blog.category",
+        "fields": {
+            "slug": "stati",
+            "parent": 25,
+            "title": "\u0421\u0442\u0430\u0442\u044c\u0438"
+        }
+    },
+    {
+        "pk": 17,
+        "model": "blog.category",
+        "fields": {
+            "slug": "strukturi-dannih",
+            "parent": 1,
+            "title": "\u0421\u0442\u0440\u0443\u043a\u0442\u0443\u0440\u044b \u0434\u0430\u043d\u043d\u044b\u0445"
+        }
+    },
+    {
+        "pk": 11,
+        "model": "blog.category",
+        "fields": {
+            "slug": "teoriya-grafov",
+            "parent": 1,
+            "title": "\u0422\u0435\u043e\u0440\u0438\u044f \u0433\u0440\u0430\u0444\u043e\u0432"
+        }
+    },
+    {
+        "pk": 15,
+        "model": "blog.category",
+        "fields": {
+            "slug": "teoriya-igr",
+            "parent": 1,
+            "title": "\u0422\u0435\u043e\u0440\u0438\u044f \u0438\u0433\u0440"
+        }
+    },
+    {
+        "pk": 13,
+        "model": "blog.category",
+        "fields": {
+            "slug": "teoriya-chisel",
+            "parent": 1,
+            "title": "\u0422\u0435\u043e\u0440\u0438\u044f \u0447\u0438\u0441\u0435\u043b"
+        }
+    },
+    {
+        "pk": 32,
+        "model": "blog.category",
+        "fields": {
+            "slug": "uchastniki",
+            "parent": 25,
+            "title": "\u0423\u0447\u0430\u0441\u0442\u043d\u0438\u043a\u0438"
+        }
+    },
+    {
+        "pk": 42,
+        "model": "blog.category",
+        "fields": {
+            "slug": "yaziki-programmirovaniya",
+            "parent": null,
+            "title": "\u042f\u0437\u044b\u043a\u0438 \u043f\u0440\u043e\u0433\u0440\u0430\u043c\u043c\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u044f"
+        }
+    }
+]

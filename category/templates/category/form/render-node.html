@@ -1,0 +1,7 @@
+<li><a href="{{ object.node.pk }}" class="{% if selected %}selected{% endif %}">{{ object.node.name }}</a>
+{% if subtree %}
+<ul {% if open %}class="open"{% endif %}>
+	{{ subtree }}
+</ul>
+{% endif %}
+</li>

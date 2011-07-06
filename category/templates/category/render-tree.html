@@ -1,14 +1,26 @@
 {% load category_tags %}
+<div id="{{attrs.id}}_container" class="tree-container">
 <ul {{ attrs_str }}>
 {% if display_root %}
 	{% for object in roots %}
-	{% render_node object value %}
+	{% render_node object %}
 	{% endfor %}
 {% else %}
 	{% for object in roots %}
 	{% for child in object.children %}
-	{% render_node child value %}
+	{% render_node child %}
 	{% endfor %}
 	{% endfor %}
 {% endif %}
 </ul>
+<script>
+$(document).ready(function(){
+	$("ul#{{ attrs.id }}").treeview({
+		persist: "location",
+		collapsed: {% if collapse %}true{% else %}false{% endif %},
+		cookieId: '{{ attrs.id }}',
+		unique: true,
+	});
+});
+</script>
+</div>

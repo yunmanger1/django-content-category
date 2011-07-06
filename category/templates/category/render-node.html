@@ -1,4 +1,5 @@
-<li><a href="{{ object.node.pk }}" class="{% if selected %}selected{% endif %}">{{ object.node.name }}</a>
+{% load category_tags %}
+<li><a href="{{ object.node|get_category_url:"ask.question" }}" class="{% if selected %}selected{% endif %}">{{ object.node.name }}</a>
 {% if subtree %}
 <ul {% if open %}class="open"{% endif %}>
 	{{ subtree }}

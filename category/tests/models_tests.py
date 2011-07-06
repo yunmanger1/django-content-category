@@ -49,7 +49,7 @@ class TestModels(unittest.TestCase):
         self.assertEquals(category3.parent.pk, self.blogs.pk)
 
     def testGetOrCreate(self):
-        category, created = Category.objects.get_or_create(name = 'ask.blogs')
+        category, created = Category.objects.get_or_create(name = 'someblogs')
         self.assertEquals(category.root.pk, category.pk)
 
 
