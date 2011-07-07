@@ -53,8 +53,7 @@ def do_render_tree(provider, root, template_name, collapse, context = None, attr
 
 class RenderTreeNode(template.Node):
 
-    def __init__(self, provider, root = None, template_name = None, collapse = True, media = 'media', *args, **kwargs):
-        super(RenderTreeNode, self).__init__(*args, **kwargs)
+    def __init__(self, provider, root = None, template_name = None, collapse = True, media = 'media', **kwargs):
         self.provider, self.root, self.template_name = provider, root, template_name
         self.attrs = kwargs
         self.collapse = collapse
@@ -146,9 +145,9 @@ def do_render_tree_tag(parser, token):
     for bit in bits[1:]:
         chunks = bit.split('=')
         if len(chunks) == 2:
-            kwargs[chunks[0]] = chunks[1]
+            kwargs[str(chunks[0])] = chunks[1]
         elif len(chunks) == 1:
-            kwargs[chunks[0]] = True
+            kwargs[str(chunks[0])] = True
     if len(bits) < 2 or not kwargs.get('provider', None):
         raise template.TemplateSyntaxError("'%s' takes 2-n arguments" % bits[0])
     return RenderTreeNode(**kwargs)
@@ -163,9 +162,9 @@ def do_render_node_tag(parser, token):
     for bit in bits[1:]:
         chunks = bit.split('=')
         if len(chunks) == 2:
-            kwargs[chunks[0]] = chunks[1]
+            kwargs[str(chunks[0])] = chunks[1]
         elif len(chunks) == 1:
-            kwargs[chunks[0]] = True
+            kwargs[str(chunks[0])] = True
 
     if len(bits) < 2 or not kwargs.get('root', None):
         raise template.TemplateSyntaxError("'%s' takes root must be set arguments" % bits[0])

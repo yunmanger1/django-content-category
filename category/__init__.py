@@ -1,3 +1,4 @@
+from category.utils import string
 try:
     from common import logwrapper
 except ImportError:

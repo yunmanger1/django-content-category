@@ -52,4 +52,12 @@ class TestModels(unittest.TestCase):
         category, created = Category.objects.get_or_create(name = 'someblogs')
         self.assertEquals(category.root.pk, category.pk)
 
+    def testGetOrCreate2(self):
+        category, created = Category.objects.get_or_create(name = 'someblogs2', parent = self.blogs)
+        self.assertTrue(created)
+        category, created = Category.objects.get_or_create(name = 'someblogs2', parent = self.blogs)
+        self.assertFalse(created)
+        cat = Category(name = 'someblogs3', parent = self.blogs)
+        cat.save(force_insert = True)
+
 

@@ -1,7 +1,9 @@
 from django import test as unittest
 from django.db.models import get_model
 from category.utils.catroot import get_root
-from ask.batchtest import dive, ask_root
+from ask.batchtest import dive
+from ask.category_providers import ask_provider
+from django.template.defaultfilters import slugify
 
 Category = get_model('category', 'category')
 BlogCategory = get_model('blog', 'category')
@@ -24,8 +26,9 @@ class TestMigration(unittest.TestCase):
         for bc in BlogCategory.objects.all():
             if bc.children.count() == 0:
                 category = dive(bc, dry = False)
-                print category
-                self.assertEquals(category.root.pk, ask_root.pk)
+                print category.slug
+                self.assertEquals(category.slug, slugify(category.name))
+                self.assertEquals(category.root.pk, ask_provider.get_root_category().pk)
                 self.assertEquals(category.name, bc.title)
                 if bc.parent:
                     self.assertEquals(category.parent.name, bc.parent.title)

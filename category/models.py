@@ -13,7 +13,7 @@ class Category(models.Model):
     class Meta:
         verbose_name = 'category'
         verbose_name_plural = 'categories'
-        unique_together = ('parent', 'slug',)
+        unique_together = ('parent', 'name',)
         ordering = ('sort_order', 'slug',)
 
     def save(self, setroot = False, force_insert = False, force_update = False, *a, **kw):
@@ -34,7 +34,7 @@ class Category(models.Model):
                 except Category.DoesNotExist:
                     self.root = None
 
-        if not self.slug:
+        if not self.slug or self.slug == '':
             self.slug = slugify(self.name)
 
         if self.is_root and self.root is None:
