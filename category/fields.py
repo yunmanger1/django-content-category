@@ -19,7 +19,7 @@ class CategoryField(forms.ModelChoiceField):
             kw['queryset'] = queryset
         kw['empty_label'] = None
         super(CategoryField, self).__init__(*a, **kw)
-        self.root = root
+#        self.root = root
         self.widget.display_root = display_root
         self.widget.collapse = collapse
 

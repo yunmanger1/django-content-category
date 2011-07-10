@@ -1,0 +1,12 @@
+{% extends "category/base.html" %}
+
+{% load uni_form insert_tags %}
+
+{% block content %}
+<form method="POST" >
+{% csrf_token %}
+{{ form|as_uni_form }}
+{% insert_form media form.media %}
+<input type='submit' value='Add' />
+</form>
+{% endblock %}
