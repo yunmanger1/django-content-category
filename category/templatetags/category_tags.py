@@ -53,10 +53,13 @@ def do_render_tree(provider, root, template_name, collapse, context = None, attr
 
 class RenderTreeNode(template.Node):
 
-    def __init__(self, provider, root = None, template_name = None, collapse = True, media = 'media', **kwargs):
+    def __init__(self, provider, root = None, template_name = None, collapse = True, elapse = False, media = 'media', **kwargs):
         self.provider, self.root, self.template_name = provider, root, template_name
         self.attrs = kwargs
-        self.collapse = collapse
+        if elapse:
+            self.collapse = not elapse
+        else:
+            self.collapse = collapse
         self.media_key = media
 
     def render(self, context):
